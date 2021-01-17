@@ -8,7 +8,7 @@ class ListPage extends React.Component {
     constructor(props){
         super(props);
         this.state ={
-            name :"Balaji",
+            name :"Gayathri",
             users : [],
             loading : true,
             selectedRows : [],
@@ -47,8 +47,8 @@ class ListPage extends React.Component {
         let newObj = [];
         newObj = this.state.selectedRows.map(id => {return this.state.users[Number(id)]})
         this.setState({selectedUsers : newObj})
-    }
-    render() {
+    } 
+  render() {
         console.log(this.state)
         return (
             
@@ -56,17 +56,17 @@ class ListPage extends React.Component {
                  {
                     this.state.startBet && <div> <BetComponent selectedRows = {this.state.selectedRows} users = {this.state.users} />  </div>
                 }
-                <Grid item xs={3} className="sideBar">
-                 {!this.state.startBet && <Card selectedRows = {this.state.selectedRows} users = {this.state.users} 
-                    startBet = {() => this.startBet()}
-                 /> }
-                </Grid>
+                
                 <Grid item xs={9}>
                     <div> 
                         {!this.state.loading && !this.state.startBet && <DataGridDemo rows={this.state.users} onRowChange = {(arr) => this.setSelectedRows(arr.rowIds)}  />} 
                     </div>
                 </Grid>
-               
+                <Grid item xs={3} className="sideBar">
+                 {!this.state.startBet && <Card selectedRows = {this.state.selectedRows} users = {this.state.users} 
+                    startBet = {() => this.startBet()}
+                 /> }
+                </Grid>
             </Grid>
               
         )

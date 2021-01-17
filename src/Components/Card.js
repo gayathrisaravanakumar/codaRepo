@@ -17,6 +17,14 @@ export default function Card(props) {
     return(
 
        <div>
+           
+           { selectedUsers.length === 9 && 
+                    <Button variant="contained" color="primary" onClick={() => props.startBet()} >
+                         Start
+                    </Button>
+                }   
+                {selectedUsers.length !== 9 && <h5>Please Select 9 user to start the bet</h5>}
+
             {selectedUsers.length &&
 
                 selectedUsers.map(user => (
@@ -35,12 +43,6 @@ export default function Card(props) {
                 ))
             }
 
-               { selectedUsers.length === 9 && 
-                    <Button variant="contained" color="primary" onClick={() => props.startBet()} >
-                         Start
-                    </Button>
-                }   
-                {selectedUsers.length !== 9 && <h6>Please Select 9 user to start the bet</h6>}
               
        </div>
         // 

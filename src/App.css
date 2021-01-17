@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #1454d4;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -49,15 +49,60 @@ html, body {
   justify-content: space-evenly;
   align-items: center;
   border : 1px solid;
-  margin: 2%;
+  margin: 3%;
   min-width: 300px;
 }
 .Betcard{
   display:flex;
   align-items: center;
-  border : 1px solid;
+  border : 2px solid;
   margin: 2%;
   flex-direction: row;
   flex-wrap: wrap;
 
+}
+
+.toolBar{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.SearchBar{
+  position: relative;
+  border-radius:2px;
+  background-color: white;
+  margin-left: 0;
+}
+
+.SearchIcon {
+  padding:2px;
+  height: 80%;
+  position: absolute;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.InputBar {
+  color: inherit;
+  padding:2px;
+  padding-left:2%;
+  width: 100%;
+}
+
+.MuiDataGrid-columnsContainer{
+  color: rgb(245, 74, 7);
+  align-items: center;
+}
+.MuiDataGrid-mainGridContainer{
+  color: rgb(8, 8, 8);
+  border-left : 1px solid;
+  border-right : 1px solid;
+}
+.MuiDataGrid-footer{
+  color: rgb(8, 8, 8);
+  border-bottom: 1px solid;
+  border-left : 1px solid;
+  border-right : 1px solid;
 }
